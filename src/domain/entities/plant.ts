@@ -1,4 +1,4 @@
-import { Optional } from "../../helpers/types/optional.ts";
+import { Optional } from "../../domain/helpers/types/optional.ts";
 import { Entity } from "./entity.ts";
 import { UniqueEntityID } from "./unique-entity-id.ts";
 
