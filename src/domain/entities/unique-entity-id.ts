@@ -1,11 +1,11 @@
 export class UniqueEntityID {
   private value: string;
 
-  toString() {
+  public toString() {
     return this.value;
   }
 
-  toValue() {
+  public toValue() {
     return this.value;
   }
 

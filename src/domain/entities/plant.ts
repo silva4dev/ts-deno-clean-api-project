@@ -1,4 +1,4 @@
-import { Optional } from "../types/optional.ts";
+import { Optional } from "../../helpers/types/optional.ts";
 import { Entity } from "./entity.ts";
 import { UniqueEntityID } from "./unique-entity-id.ts";
 
@@ -13,35 +13,35 @@ interface PlantProps {
 }
 
 export class Plant extends Entity<PlantProps> {
-  get name() {
+  public get name() {
     return this.props.name;
   }
 
-  get type() {
+  public get type() {
     return this.props.type;
   }
 
-  get description() {
+  public get description() {
     return this.props.description;
   }
 
-  get careInstructions() {
+  public get careInstructions() {
     return this.props.careInstructions;
   }
 
-  get imageUrl() {
+  public get imageUrl() {
     return this.props.imageUrl;
   }
 
-  get createdAt() {
+  public get createdAt() {
     return this.props.createdAt;
   }
 
-  get updatedAt() {
+  public get updatedAt() {
     return this.props.updatedAt;
   }
 
-  static create(
+  public static create(
     props: Optional<PlantProps, "createdAt">,
     id?: UniqueEntityID,
   ) {
