@@ -2,9 +2,8 @@ import {
   assertArrayIncludes,
   assertEquals,
 } from "https://deno.land/std@0.200.0/assert/mod.ts";
-const { test } = Deno;
 import { CreatePlantCommand } from "./create-plant-command.ts";
-import { InMemoryPlantsRepository } from "../../infra/in-memory/in-memory-plants-repository.ts";
+import { InMemoryPlantsRepository } from "../../../tests/repositories/in-memory-plants-repository.ts";
 
 const makeSut = () => {
   const plantRepository = new InMemoryPlantsRepository();
@@ -16,7 +15,7 @@ const makeSut = () => {
   };
 };
 
-test("Should add a new plant", async () => {
+Deno.test("Should add a new plant", async () => {
   const { sut } = makeSut();
 
   const plant = await sut.execute({
