@@ -1,6 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.200.0/assert/mod.ts";
-const { test } = Deno;
-import { InMemoryPlantsRepository } from "../../infra/in-memory/in-memory-plants-repository.ts";
+import { InMemoryPlantsRepository } from "../../../tests/repositories/in-memory-plants-repository.ts";
 import { ListPlantsCommand } from "./list-plants-command.ts";
 import { Plant } from "../../domain/entities/plant.ts";
 
@@ -14,7 +13,7 @@ const makeSut = () => {
   };
 };
 
-test("Should return a list of plants with correct details", async () => {
+Deno.test("Should return a list of plants with correct details", async () => {
   const { sut, plantRepository } = makeSut();
 
   await plantRepository.createMany([
@@ -43,5 +42,14 @@ test("Should return a list of plants with correct details", async () => {
   const plants = await sut.execute();
 
   assertEquals(plants.length, 2);
+  assertEquals(plants instanceof Array, true);
+});
+
+Deno.test("Should return an empty list of plants", async () => {
+  const { sut } = makeSut();
+
+  const plants = await sut.execute();
+
+  assertEquals(plants.length, 0);
   assertEquals(plants instanceof Array, true);
 });
