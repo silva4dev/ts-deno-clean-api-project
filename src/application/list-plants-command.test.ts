@@ -17,27 +17,27 @@ describe('List Plants Command', () => {
 		sut = new ListPlantsCommand(inMemoryPlantsRepository)
 	})
 
-	it('Should return a list of plants with correct details', async () => {
+	it('Should return a list of plants', async () => {
 		await inMemoryPlantsRepository.createMany([
 			Plant.create({
 				name: 'Suculenta',
 				type: 'Suculenta',
-				description: 'Uma suculenta bonita',
+				description: 'A beautiful cactus',
 				careInstructions: [
-					'Regue uma vez por semana',
-					'Mantenha em luz indireta',
+					'Water once a week',
+					'Keep in indirect light',
 				],
 				imageUrl: 'https://example.com/suculenta.jpg',
 			}),
 			Plant.create({
-				name: 'Orquídea',
-				type: 'Orquídea',
-				description: 'Uma orquídea elegante e colorida',
+				name: 'Orchid',
+				type: 'Orchid',
+				description: 'An elegant and colorful orchid',
 				careInstructions: [
-					'Regue duas vezes por semana',
-					'Mantenha em local com boa circulação de ar',
+					'Water twice a week',
+					'Keep in a location with good air circulation',
 				],
-				imageUrl: 'https://example.com/orquidea.jpg',
+				imageUrl: 'https://example.com/orchid.jpg',
 			}),
 		])
 
