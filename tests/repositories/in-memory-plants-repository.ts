@@ -1,20 +1,20 @@
-import { Plant } from "../../src/domain/entities/plant.ts";
-import { PlantsRepository } from "../../src/domain/repositories/plants-repository.ts";
+import { Plant } from '@/domain/entities/plant.ts';
+import { PlantsRepository } from '@/domain/repositories/plants-repository.ts';
 
 export class InMemoryPlantsRepository implements PlantsRepository {
-  public plants: Plant[] = [];
+	public plants: Plant[] = [];
 
-  public async create(data: Plant): Promise<void> {
-    this.plants.push(data);
-  }
+	public async create(data: Plant): Promise<void> {
+		this.plants.push(data);
+	}
 
-  public async findMany(): Promise<Plant[]> {
-    return this.plants;
-  }
+	public async findMany(): Promise<Plant[]> {
+		return this.plants;
+	}
 
-  public async createMany(data: Plant[]): Promise<Plant[]> {
-    data.forEach((plant) => this.plants.push(plant));
+	public async createMany(data: Plant[]): Promise<Plant[]> {
+		data.forEach((plant) => this.plants.push(plant));
 
-    return this.plants;
-  }
+		return this.plants;
+	}
 }
