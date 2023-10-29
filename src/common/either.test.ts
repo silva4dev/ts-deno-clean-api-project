@@ -11,14 +11,14 @@ function doSomething(shouldSuccess: boolean): Either<string, number> {
 }
 
 describe('Either', () => {
-	it('success result', () => {
+	it('Should success result', () => {
 		const result = doSomething(true)
 
 		assertEquals(result.isLeft(), false)
 		assertEquals(result.isRight(), true)
 	})
 
-	it('error result', () => {
+	it('Should error result', () => {
 		const result = doSomething(false)
 
 		assertEquals(result.isLeft(), true)
