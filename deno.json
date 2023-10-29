@@ -1,0 +1,48 @@
+{
+  "imports": {
+    "@/": "./src/"
+  },
+  "tasks": {
+    "test": "deno test --import-map=import_map.json --unstable --allow-read --allow-write"
+  },
+  "compilerOptions": {
+    "lib": [
+      "deno.window"
+    ],
+    "allowJs": true,
+    "strict": true,
+    "experimentalDecorators": true
+  },
+  "lint": {
+    "include": [
+      "./src/",
+      "./tests/"
+    ],
+    "exclude": [
+      "./.vscode/"
+    ],
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "exclude": [
+        "require-await"
+      ]
+    }
+  },
+  "fmt": {
+    "useTabs": true,
+    "lineWidth": 80,
+    "indentWidth": 4,
+    "singleQuote": true,
+    "semiColons": true,
+    "proseWrap": "preserve",
+    "include": [
+      "./src/",
+      "./tests/"
+    ],
+    "exclude": [
+      "./.vscode/"
+    ]
+  }
+}
