@@ -35,7 +35,7 @@
     "lineWidth": 80,
     "indentWidth": 4,
     "singleQuote": true,
-    "semiColons": true,
+    "semiColons": false,
     "proseWrap": "preserve",
     "include": [
       "./src/",
