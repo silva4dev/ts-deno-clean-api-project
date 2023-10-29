@@ -2,7 +2,7 @@ import { Entity } from '@/common/entities/entity.ts'
 import { UniqueEntityID } from '@/common/entities/unique-entity-id.ts'
 import { Optional } from '@/common/types/optional.ts'
 
-interface PlantProps {
+export interface PlantProps {
 	name: string
 	type: string
 	description: string
