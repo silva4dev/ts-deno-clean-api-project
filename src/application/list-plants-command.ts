@@ -1,6 +1,6 @@
-import { Plant } from '@/domain/entities/plant.ts';
-import { PlantsRepository } from '@/domain/repositories/plants-repository.ts';
-import { Command } from '@/common/interfaces/command.ts';
+import { Plant } from '@/domain/entities/plant.ts'
+import { PlantsRepository } from '@/domain/repositories/plants-repository.ts'
+import { Command } from '@/common/interfaces/command.ts'
 
 export class ListPlantsCommand implements Command<void, Plant[]> {
 	constructor(
@@ -8,8 +8,8 @@ export class ListPlantsCommand implements Command<void, Plant[]> {
 	) {}
 
 	async execute(): Promise<Plant[]> {
-		const plants = await this.plantRepository.findMany();
+		const plants = await this.plantRepository.findMany()
 
-		return plants;
+		return plants
 	}
 }

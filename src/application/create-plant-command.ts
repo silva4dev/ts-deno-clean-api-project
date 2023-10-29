@@ -1,13 +1,13 @@
-import { Plant } from '@/domain/entities/plant.ts';
-import { PlantsRepository } from '@/domain/repositories/plants-repository.ts';
-import { Command } from '@/common/interfaces/command.ts';
+import { Plant } from '@/domain/entities/plant.ts'
+import { PlantsRepository } from '@/domain/repositories/plants-repository.ts'
+import { Command } from '@/common/interfaces/command.ts'
 
 export interface CreatePlantCommandRequest {
-	name: string;
-	type: string;
-	description: string;
-	careInstructions: string[];
-	imageUrl: string;
+	name: string
+	type: string
+	description: string
+	careInstructions: string[]
+	imageUrl: string
 }
 
 export class CreatePlantCommand
@@ -29,10 +29,10 @@ export class CreatePlantCommand
 			careInstructions,
 			imageUrl,
 			type,
-		});
+		})
 
-		await this.plantRepository.create(plant);
+		await this.plantRepository.create(plant)
 
-		return plant;
+		return plant
 	}
 }

@@ -1,3 +1,3 @@
 export interface Command<E, S> {
-	execute(input: E): Promise<S>;
+	execute(input: E): Promise<S>
 }
