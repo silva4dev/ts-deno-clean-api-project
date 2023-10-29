@@ -41,16 +41,16 @@ describe('List Plants Command', () => {
 			}),
 		])
 
-		const plants = await sut.execute()
+		const result = await sut.execute()
 
-		assertEquals(plants.length, 2)
-		assertEquals(plants instanceof Array, true)
+		assertEquals(result.value?.plants.length, 2)
+		assertEquals(result.value?.plants instanceof Array, true)
 	})
 
 	it('Should return an empty list of plants', async () => {
-		const plants = await sut.execute()
+		const result = await sut.execute()
 
-		assertEquals(plants.length, 0)
-		assertEquals(plants instanceof Array, true)
+		assertEquals(result.value?.plants.length, 0)
+		assertEquals(result.value?.plants instanceof Array, true)
 	})
 })
