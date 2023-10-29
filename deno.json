@@ -10,8 +10,7 @@
       "deno.window"
     ],
     "allowJs": true,
-    "strict": true,
-    "experimentalDecorators": true
+    "strict": true
   },
   "lint": {
     "include": [
