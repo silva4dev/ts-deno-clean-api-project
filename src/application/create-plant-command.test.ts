@@ -1,12 +1,23 @@
 import { assertEquals } from 'https://deno.land/std@0.200.0/assert/mod.ts'
-import { describe, it } from 'https://deno.land/std@0.204.0/testing/bdd.ts'
-import { makeCreatePlantFactory } from '../../tests/factories/make-create-plant-factory.ts'
+import {
+	beforeEach,
+	describe,
+	it,
+} from 'https://deno.land/std@0.204.0/testing/bdd.ts'
+import { InMemoryPlantsRepository } from '../../tests/repositories/in-memory-plants-repository.ts'
+import { CreatePlantCommand } from '@/application/create-plant-command.ts'
+
+let inMemoryPlantsRepository: InMemoryPlantsRepository
+let sut: CreatePlantCommand
 
 describe('Create Plant Command', () => {
-	it('Should create a new plant', async () => {
-		const { createPlantCommand } = makeCreatePlantFactory()
+	beforeEach(() => {
+		inMemoryPlantsRepository = new InMemoryPlantsRepository()
+		sut = new CreatePlantCommand(inMemoryPlantsRepository)
+	})
 
-		const result = await createPlantCommand.execute({
+	it('Should create a new plant', async () => {
+		const result = await sut.execute({
 			name: 'Suculenta',
 			type: 'Suculenta',
 			description: 'A beautiful cactus',
