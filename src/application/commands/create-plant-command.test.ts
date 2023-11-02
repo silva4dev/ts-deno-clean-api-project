@@ -4,8 +4,8 @@ import {
 	describe,
 	it,
 } from 'https://deno.land/std@0.204.0/testing/bdd.ts'
-import { InMemoryPlantsRepository } from '../../tests/repositories/in-memory-plants-repository.ts'
-import { CreatePlantCommand } from '@/application/create-plant-command.ts'
+import { InMemoryPlantsRepository } from '../../../tests/repositories/in-memory-plants-repository.ts'
+import { CreatePlantCommand } from '@/application/commands/create-plant-command.ts'
 
 let inMemoryPlantsRepository: InMemoryPlantsRepository
 let sut: CreatePlantCommand
