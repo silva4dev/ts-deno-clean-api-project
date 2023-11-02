@@ -1,6 +1,6 @@
 import { assertEquals } from 'https://deno.land/std@0.200.0/assert/mod.ts'
 import { describe, it } from 'https://deno.land/std@0.204.0/testing/bdd.ts'
-import { Plant } from './plant.ts'
+import { Plant } from '@/domain/entities/plant.ts'
 
 describe('Plant entity', () => {
 	it('Should create a Plant instance with the provided data', async () => {
