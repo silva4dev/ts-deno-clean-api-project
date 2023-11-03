@@ -3,7 +3,7 @@ import { describe, it } from 'https://deno.land/std@0.204.0/testing/bdd.ts'
 import { Plant } from '@/domain/entities/plant.ts'
 
 describe('Plant entity', () => {
-	it('Should create a Plant instance with the provided data', async () => {
+	it('Should create a plant instance with the provided data', async () => {
 		const result = Plant.create({
 			name: 'Suculenta',
 			type: 'Suculenta',
