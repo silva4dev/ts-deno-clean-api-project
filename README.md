@@ -6,8 +6,8 @@ Um aplicativo que permite aos usuários explorar um catálogo de plantas, exibin
 - [ ] Deve ser possível se autenticar na plataforma;
 - [ ] Deve ser possível se cadastrar na plataforma;
 - [ ] Deve ser possível obter o perfil de um usuário logado;
-- [ ] Deve ser possível adicionar uma nova planta ao catálogo;
-- [ ] Deve ser possível listar todas as plantas no catálogo;
+- [x] Deve ser possível adicionar uma nova planta ao catálogo;
+- [x] Deve ser possível listar todas as plantas no catálogo;
 - [ ] Deve ser possível pesquisar plantas por nome, tipo ou características;
 - [ ] Deve ser possível exibir detalhes de uma planta selecionada;
 
