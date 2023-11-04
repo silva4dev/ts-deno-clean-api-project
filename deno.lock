@@ -1268,9 +1268,6 @@
     "https://deno.land/x/deno_faker@v1.0.3/mod.ts": "f5a91e8796668d4c9354d4a149bd34cc027b79950e6e17713eac9f41980374c9",
     "https://deno.land/x/deno_faker@v1.0.3/vendor/mersenne.ts": "8a61935ca2f91b925d9e8cf262eaf8b3277d091f791c8b4f93f995359db1a9a7",
     "https://deno.land/x/deno_faker@v1.0.3/vendor/unique.ts": "b8bb044d4caf0bb1a868bd26839bb5822e2013e8385f119db7029631e5a53e0b",
-    "https://deno.land/x/deno_faker@v1.0.3/vendor/user-agent.ts": "b95c7bda4ad37ba25b60c4431227361eabba70db14456abb69227d6536ea93fb",
-    "https://deno.land/x/test_suite@0.16.1/describe.ts": "c0c944d8e4fba4c54f168ba8799aca4ffabe7cdecfac28c5dbaf0d1f8b345df1",
-    "https://deno.land/x/test_suite@0.16.1/mod.ts": "16dd20330261d5de4a0b4f85676329eb77679649d01e6468898883e527c9e133",
-    "https://deno.land/x/test_suite@0.16.1/test_suite.ts": "7854f0ab37d920355fe2e1a2c386f104601449eb93fcf537dafe30d6915a32d4"
+    "https://deno.land/x/deno_faker@v1.0.3/vendor/user-agent.ts": "b95c7bda4ad37ba25b60c4431227361eabba70db14456abb69227d6536ea93fb"
   }
 }

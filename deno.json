@@ -1,9 +1,9 @@
 {
   "imports": {
-    "@/": "./src/"
+    "@/": "./"
   },
   "tasks": {
-    "test": "deno test --import-map=import_map.json --unstable --allow-read --allow-write"
+    "test": "deno test --unstable --allow-read --allow-write"
   },
   "compilerOptions": {
     "lib": [
