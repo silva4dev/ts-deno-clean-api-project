@@ -25,7 +25,8 @@
         "recommended"
       ],
       "exclude": [
-        "require-await"
+        "require-await",
+        "no-namespace"
       ]
     }
   },
