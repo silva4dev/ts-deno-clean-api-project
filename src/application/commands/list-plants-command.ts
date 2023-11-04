@@ -3,24 +3,26 @@ import { PlantsRepository } from '@/domain/repositories/plants-repository.ts'
 import { Command } from '@/common/interfaces/command.ts'
 import { Either, right } from '@/common/either.ts'
 
-type ListPlantsCommandResponse = Either<
-	null,
-	{
-		plants: Plant[]
-	}
->
-
 export class ListPlantsCommand
-	implements Command<void, ListPlantsCommandResponse> {
+	implements Command<void, ListPlantsCommand.Response> {
 	constructor(
 		private plantRepository: PlantsRepository,
 	) {}
 
-	async execute(): Promise<ListPlantsCommandResponse> {
+	async execute(): Promise<ListPlantsCommand.Response> {
 		const plants = await this.plantRepository.findMany()
 
 		return right({
 			plants,
 		})
 	}
+}
+
+namespace ListPlantsCommand {
+	export type Response = Either<
+		null,
+		{
+			plants: Plant[]
+		}
+	>
 }
