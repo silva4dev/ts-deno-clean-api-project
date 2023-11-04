@@ -1,12 +1,7 @@
-import { assertEquals } from 'https://deno.land/std@0.200.0/assert/mod.ts'
-import {
-	beforeEach,
-	describe,
-	it,
-} from 'https://deno.land/std@0.204.0/testing/bdd.ts'
-import { Plant } from '@/domain/entities/plant.ts'
-import { ListPlantsCommand } from '@/application/commands/list-plants-command.ts'
-import { InMemoryPlantsRepository } from '../../../tests/repositories/in-memory-plants-repository.ts'
+import { assertEquals, beforeEach, describe, it } from '@/deps.ts'
+import { Plant } from '@/src/domain/entities/plant.ts'
+import { ListPlantsCommand } from '@/src/application/commands/list-plants-command.ts'
+import { InMemoryPlantsRepository } from '@/tests/repositories/in-memory-plants-repository.ts'
 
 let inMemoryPlantsRepository: InMemoryPlantsRepository
 let sut: ListPlantsCommand

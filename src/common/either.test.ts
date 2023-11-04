@@ -1,6 +1,5 @@
-import { assertEquals } from 'https://deno.land/std@0.200.0/assert/mod.ts'
-import { describe, it } from 'https://deno.land/std@0.204.0/testing/bdd.ts'
-import { Either, left, right } from './either.ts'
+import { assertEquals, describe, it } from '@/deps.ts'
+import { Either, left, right } from '@/src/common/either.ts'
 
 function doSomething(shouldSuccess: boolean): Either<string, number> {
 	if (shouldSuccess) {
