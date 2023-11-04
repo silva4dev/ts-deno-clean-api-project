@@ -3,23 +3,9 @@ import { PlantsRepository } from '@/domain/repositories/plants-repository.ts'
 import { Command } from '@/common/interfaces/command.ts'
 import { Either, right } from '@/common/either.ts'
 
-export interface CreatePlantCommandRequest {
-	name: string
-	type: string
-	description: string
-	careInstructions: string[]
-	imageUrl: string
-}
-
-type CreatePlantCommandResponse = Either<
-	null,
-	{
-		plant: Plant
-	}
->
-
 export class CreatePlantCommand
-	implements Command<CreatePlantCommandRequest, CreatePlantCommandResponse> {
+	implements
+		Command<CreatePlantCommand.Request, CreatePlantCommand.Response> {
 	constructor(
 		private plantRepository: PlantsRepository,
 	) {}
@@ -30,7 +16,7 @@ export class CreatePlantCommand
 		careInstructions,
 		imageUrl,
 		type,
-	}: CreatePlantCommandRequest): Promise<CreatePlantCommandResponse> {
+	}: CreatePlantCommand.Request): Promise<CreatePlantCommand.Response> {
 		const plant = Plant.create({
 			name,
 			description,
@@ -45,4 +31,21 @@ export class CreatePlantCommand
 			plant,
 		})
 	}
+}
+
+namespace CreatePlantCommand {
+	export type Request = {
+		name: string
+		type: string
+		description: string
+		careInstructions: string[]
+		imageUrl: string
+	}
+
+	export type Response = Either<
+		null,
+		{
+			plant: Plant
+		}
+	>
 }
