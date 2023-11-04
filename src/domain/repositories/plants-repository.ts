@@ -1,4 +1,4 @@
-import { Plant } from '../entities/plant.ts'
+import { Plant } from '@/src/domain/entities/plant.ts'
 
 export interface PlantsRepository {
 	create: (data: Plant) => Promise<void>

@@ -1,6 +1,6 @@
-import { Plant, PlantProps } from '@/domain/entities/plant.ts'
-import { UniqueEntityID } from '@/common/entities/unique-entity-id.ts'
-import { faker } from 'https://deno.land/x/deno_faker@v1.0.3/mod.ts'
+import { Plant, PlantProps } from '@/src/domain/entities/plant.ts'
+import { UniqueEntityID } from '@/src/common/entities/unique-entity-id.ts'
+import { faker } from '@/deps.ts'
 
 export function makeCreatePlantFactory(
 	override: Partial<PlantProps> = {},

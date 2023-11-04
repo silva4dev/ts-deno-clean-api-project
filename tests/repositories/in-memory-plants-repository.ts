@@ -1,5 +1,5 @@
-import { Plant } from '@/domain/entities/plant.ts'
-import { PlantsRepository } from '@/domain/repositories/plants-repository.ts'
+import { Plant } from '@/src/domain/entities/plant.ts'
+import { PlantsRepository } from '@/src/domain/repositories/plants-repository.ts'
 
 export class InMemoryPlantsRepository implements PlantsRepository {
 	public plants: Plant[] = []
