@@ -3,7 +3,8 @@
     "@/": "./"
   },
   "tasks": {
-    "test": "deno test --unstable --allow-read --allow-write"
+    "test": "deno test --unstable --allow-read --allow-write",
+    "dev": "deno run --allow-run=. --allow-net src/main.ts"
   },
   "compilerOptions": {
     "lib": [
@@ -15,7 +16,8 @@
   "lint": {
     "include": [
       "./src/",
-      "./tests/"
+      "./tests/",
+      "./deps.ts"
     ],
     "exclude": [
       "./.vscode/"
@@ -39,7 +41,8 @@
     "proseWrap": "preserve",
     "include": [
       "./src/",
-      "./tests/"
+      "./tests/",
+      "./deps.ts"
     ],
     "exclude": [
       "./.vscode/"
