@@ -1,41 +1,38 @@
-export class Left<L, R> {
-	readonly value: L
+export type Left<T> = { tag: 'left'; value: T }
+export type Right<T> = { tag: 'right'; value: T }
+export type Either<L, R> = Left<L> | Right<R>
 
-	constructor(value: L) {
-		this.value = value
-	}
-
-	isRight(): this is Right<L, R> {
-		return false
-	}
-
-	isLeft(): this is Left<L, R> {
-		return true
-	}
-}
-
-export class Right<L, R> {
-	readonly value: R
-
-	constructor(value: R) {
-		this.value = value
-	}
-
-	isRight(): this is Right<L, R> {
-		return true
-	}
-
-	isLeft(): this is Left<L, R> {
-		return false
+export const match = <T, L, R>(
+	input: Either<L, R>,
+	left: (left: L) => T,
+	right: (right: R) => T,
+) => {
+	switch (input.tag) {
+		case 'left':
+			return left(input.value)
+		case 'right':
+			return right(input.value)
 	}
 }
 
-export type Either<L, R> = Left<L, R> | Right<L, R>
-
-export const left = <L, R>(value: L): Either<L, R> => {
-	return new Left(value)
+export const isRight = <L, R>(input: Either<L, R>): input is Right<R> => {
+	return input.tag === 'right'
 }
 
-export const right = <L, R>(value: R): Either<L, R> => {
-	return new Right(value)
+export const isLeft = <L, R>(input: Either<L, R>): input is Left<L> => {
+	return input.tag === 'left'
+}
+
+export const Right = <T>(value: T): Right<T> => {
+	return {
+		tag: 'right',
+		value,
+	}
+}
+
+export const Left = <T>(value: T): Left<T> => {
+	return {
+		tag: 'left',
+		value,
+	}
 }

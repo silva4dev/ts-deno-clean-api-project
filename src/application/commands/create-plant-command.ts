@@ -1,7 +1,7 @@
 import { Plant } from '@/src/domain/entities/plant.ts'
 import { PlantsRepository } from '@/src/domain/repositories/plants-repository.ts'
 import { Command } from '@/src/common/interfaces/command.ts'
-import { Either, right } from '@/src/common/either.ts'
+import { Either, Right } from '@/src/common/either.ts'
 
 export class CreatePlantCommand
 	implements
@@ -27,7 +27,7 @@ export class CreatePlantCommand
 
 		await this.plantRepository.create(plant)
 
-		return right({
+		return Right({
 			plant,
 		})
 	}
