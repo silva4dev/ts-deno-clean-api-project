@@ -1,6 +1,6 @@
-import { Entity } from '@/src/common/entities/entity.ts'
-import { UniqueEntityID } from '@/src/common/entities/unique-entity-id.ts'
-import { Optional } from '@/src/common/types/optional.ts'
+import { Entity } from '@/src/@shared/entities/entity.ts'
+import { UniqueEntityID } from '@/src/@shared/entities/unique-entity-id.ts'
+import { Optional } from '@/src/@shared/types/optional.ts'
 
 export interface PlantProps {
 	name: string

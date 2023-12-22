@@ -1,7 +1,7 @@
 import { Plant } from '@/src/domain/entities/plant.ts'
 import { PlantsRepository } from '@/src/domain/repositories/plants-repository.ts'
-import { Command } from '@/src/common/interfaces/command.ts'
-import { Either, Right } from '@/src/common/either.ts'
+import { Command } from '@/src/@shared/interfaces/command.ts'
+import { Either, Right } from '@/src/@shared/either.ts'
 
 export class CreatePlantCommand
 	implements

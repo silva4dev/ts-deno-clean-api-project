@@ -1,5 +1,5 @@
 import { assertEquals, describe, it } from '@/deps.ts'
-import { Either, isLeft, isRight, Left, Right } from '@/src/common/either.ts'
+import { Either, isLeft, isRight, Left, Right } from './either.ts'
 
 function doSomething(shouldSuccess: boolean): Either<string, number> {
 	if (shouldSuccess) {

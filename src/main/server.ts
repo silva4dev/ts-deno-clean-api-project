@@ -2,7 +2,7 @@ import { Application, Context, Router, Status } from '@/deps.ts'
 import { ListPlantsCommand } from '@/src/application/commands/list-plants-command.ts'
 import { InMemoryPlantsRepository } from '@/tests/repositories/in-memory-plants-repository.ts'
 import { CreatePlantCommand } from '@/src/application/commands/create-plant-command.ts'
-import { isRight } from '@/src/common/either.ts'
+import { isRight } from '@/src/@shared/either.ts'
 
 const inMemoryPlantsRepository = new InMemoryPlantsRepository()
 const listPlantsCommand = new ListPlantsCommand(inMemoryPlantsRepository)
