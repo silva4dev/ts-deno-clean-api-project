@@ -1,5 +1,5 @@
 import { assertEquals, describe, it } from '@/deps.ts'
-import { Plant } from '@/src/domain/entities/plant.ts'
+import { Plant } from '@/src/domain/entities/plant-entity.ts'
 
 describe('Plant entity', () => {
 	it('Should create a plant instance with the provided data', async () => {
