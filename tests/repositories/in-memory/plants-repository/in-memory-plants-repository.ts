@@ -1,4 +1,4 @@
-import { Plant } from '@/src/domain/entities/plant.ts'
+import { Plant } from '@/src/domain/entities/plant-entity.ts'
 import { PlantsRepository } from '@/src/domain/repositories/plants-repository.ts'
 
 export class InMemoryPlantsRepository implements PlantsRepository {
