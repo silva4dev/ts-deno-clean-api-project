@@ -1,7 +1,7 @@
 import { assertEquals, beforeEach, describe, it } from '@/deps.ts'
-import { Plant } from '@/src/domain/entities/plant.ts'
-import { ListPlantsCommand } from '@/src/application/commands/list-plants-command.ts'
-import { InMemoryPlantsRepository } from '@/tests/repositories/in-memory-plants-repository.ts'
+import { Plant } from '@/src/domain/entities/plant-entity.ts'
+import { ListPlantsCommand } from '@/src/application/commands/list-plants/list-plants-command.ts'
+import { InMemoryPlantsRepository } from '@/tests/repositories/in-memory/plants-repository/in-memory-plants-repository.ts'
 
 let inMemoryPlantsRepository: InMemoryPlantsRepository
 let sut: ListPlantsCommand
