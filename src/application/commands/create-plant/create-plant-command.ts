@@ -1,4 +1,4 @@
-import { Plant } from '@/src/domain/entities/plant.ts'
+import { Plant } from '@/src/domain/entities/plant-entity.ts'
 import { PlantsRepository } from '@/src/domain/repositories/plants-repository.ts'
 import { Command } from '@/src/@shared/interfaces/command.ts'
 import { Either, Right } from '@/src/@shared/either.ts'
