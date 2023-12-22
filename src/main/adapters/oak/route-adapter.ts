@@ -1,4 +1,5 @@
-import { Controller, HttpRequest } from '@/src/presentation/protocols/index.ts'
+import { HttpRequest } from '@/src/presentation/protocols/http.ts'
+import { Controller } from '@/src/presentation/protocols/controller.ts'
 import { Context } from '@/deps.ts'
 
 export const adaptRoute = (controller: Controller) => {
