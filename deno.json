@@ -4,7 +4,8 @@
   },
   "tasks": {
     "test": "deno test --unstable --allow-read --allow-write",
-    "dev": "deno run --allow-run=. --allow-net src/main/server/main.ts"
+    "start": "deno run --allow-run=. --allow-net src/main/server/main.ts",
+    "start:dev": "denon run --allow-run=. --allow-net src/main/server/main.ts"
   },
   "compilerOptions": {
     "lib": [
