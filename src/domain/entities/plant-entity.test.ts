@@ -11,16 +11,11 @@ describe('Plant entity', () => {
 				'Water once a week',
 				'Keep in indirect light',
 			],
-			imageUrl: 'https://example.com/suculenta.jpg',
 		})
 
 		assertEquals(result.careInstructions.length, 2)
 		assertEquals(result.name, 'Suculenta')
 		assertEquals(result.type, 'Suculenta')
 		assertEquals(result.description, 'A beautiful cactus')
-		assertEquals(
-			result.imageUrl,
-			'https://example.com/suculenta.jpg',
-		)
 	})
 })

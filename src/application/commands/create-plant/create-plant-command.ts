@@ -14,14 +14,12 @@ export class CreatePlantCommand
 		name,
 		description,
 		careInstructions,
-		imageUrl,
 		type,
 	}: CreatePlantCommand.Request): Promise<CreatePlantCommand.Response> {
 		const plant = Plant.create({
 			name,
 			description,
 			careInstructions,
-			imageUrl,
 			type,
 		})
 
@@ -39,7 +37,6 @@ namespace CreatePlantCommand {
 		type: string
 		description: string
 		careInstructions: string[]
-		imageUrl: string
 	}
 
 	export type Response = Either<

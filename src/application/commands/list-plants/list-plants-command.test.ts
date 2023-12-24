@@ -22,7 +22,6 @@ describe('List Plants Command', () => {
 					'Water once a week',
 					'Keep in indirect light',
 				],
-				imageUrl: 'https://example.com/suculenta.jpg',
 			}),
 			Plant.create({
 				name: 'Orchid',
@@ -32,7 +31,6 @@ describe('List Plants Command', () => {
 					'Water twice a week',
 					'Keep in a location with good air circulation',
 				],
-				imageUrl: 'https://example.com/orchid.jpg',
 			}),
 		])
 

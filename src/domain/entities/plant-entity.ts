@@ -7,7 +7,6 @@ export interface PlantProps {
 	type: string
 	description: string
 	careInstructions: string[]
-	imageUrl: string
 	createdAt: Date
 	updatedAt?: Date
 }
@@ -27,10 +26,6 @@ export class Plant extends Entity<PlantProps> {
 
 	public get careInstructions() {
 		return this.props.careInstructions
-	}
-
-	public get imageUrl() {
-		return this.props.imageUrl
 	}
 
 	public get createdAt() {
