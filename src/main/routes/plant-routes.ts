@@ -4,10 +4,6 @@ import { makeCreatePlantController } from '@/src/main/factories/controllers/crea
 
 const router = new Router()
 
-router
-	.get<string>(
-		'/',
-		adaptRoute(makeCreatePlantController()),
-	)
+router.get<string>('/', adaptRoute(makeCreatePlantController()))
 
 export default router
